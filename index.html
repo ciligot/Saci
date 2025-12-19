@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>ULTIM'ORA - Notizie 24</title>
+    <style>
+        body { font-family: 'Helvetica', Arial, sans-serif; margin: 0; background-color: #f4f4f4; }
+        .header { background-color: #d32f2f; color: white; padding: 15px; text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+        .container { max-width: 800px; margin: 20px auto; background: white; padding: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-top: 5px solid #d32f2f; }
+        .breaking { color: #d32f2f; font-size: 14px; font-weight: bold; }
+        h1 { font-size: 32px; line-height: 1.2; margin: 10px 0; color: #222; }
+        .image-placeholder { width: 100%; height: 300px; background-color: #ddd; display: flex; align-items: center; justify-content: center; color: #777; font-weight: bold; margin-bottom: 20px; border: 1px solid #ccc; }
+        .article-text { font-size: 18px; line-height: 1.6; color: #444; }
+        .countdown-box { margin-top: 30px; padding: 15px; background: #fffde7; border: 1px solid #fff59d; text-align: center; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="header">DIRETTA NOTIZIE 24 - ECONOMIA</div>
+
+<div class="container">
+
+
+ <p class="breaking">🔴 ULTIMA ORA</p>
+ 
+ <p class="center"> <h1>Caos alla BSV: Fabbrica verso la chiusura. <br> I dipendenti: <br>"Il padrone lavora troppo, ci sentiamo inutili"<h1> </p>
+    
+
+
+   
+    
+   <div style="text-align:center; margin-bottom:20px;">
+    <img src="foto_fabbrica.jpg" alt="BSV" style="width:100%; max-height:400px; object-fit: cover; border: 1px solid #ccc;">
+    <p style="font-size: 12px; color: #666; text-align: left; margin-top: 5px;">
+    <i>Cili Archivio/Ansa: Un momento di lavoro degli operai, quando lavoravano tre ore in più al giorno solo per divertimento, prima dell'era Simone.</i>
+</p>
+</div>
+
+    <div class="article-text">
+        <p><strong>PORDENONE</strong> - Clamoroso sviluppo nel settore industriale. La nota azienda <strong>BSV</strong> rischia la chiusura immediata, ma non per crisi economica. <br>I lavoratori hanno rassegnato le dimissioni di massa in segno di protesta.</p>
+        
+        <p><em>"Non ne possiamo più"</em>, spiega un delegato sindacale. <em>"Il padrone lavora incessantemente anche la domenica, sotto Natale e persino durante le pause caffè. Ha iniziato a fare i turni di tutti, rendendo la nostra presenza superflua. Ci licenziamo per permettergli di finire tutto il lavoro della regione da solo."</em></p>
+        
+        <p>Le autorità stanno valutando l'istituzione di un "TFR per eccesso di zelo" per il titolare, mentre la fabbrica rimane deserta ma con le macchine che girano a pieno ritmo.</p>
+    </div>
+
+    <div class="countdown-box" id="auto-destruct">
+        Questa notizia è così riservata che la pagina si autodistruggerà tra <span id="seconds">10</span> secondi...
+    </div>
+</div>
+
+<script>
+    let sec = 10;
+    const timer = setInterval(() => {
+        sec--;
+        document.getElementById('seconds').innerText = sec;
+        if (sec <= 0) {
+            clearInterval(timer);
+            // Nasconde tutto e mostra il messaggio finale dello scherzo
+            document.body.innerHTML = 
+                <div style="text-align:center; padding-top:20%; font-family:sans-serif;">
+                    <h1 style="font-size:50px;">🎅 BUON NATALE! 🎄</h1>
+                    <p style="font-size:24px;">Scherzo! Torna a lavorare (ma non troppo!).</p>
+                    <button onclick="location.reload()" style="padding:10px 20px; cursor:pointer;">Rileggi la notizia</button>
+                </div>
+            ;
+        }
+    }, 1000);
+</script>
+
+</body>
+</html>
